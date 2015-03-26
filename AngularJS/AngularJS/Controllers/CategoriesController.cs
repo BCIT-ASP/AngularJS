@@ -22,12 +22,13 @@ namespace AngularJS.Controllers
         //public IQueryable<Category> GetCategories()
         public IQueryable<Category> GetCategories()
         {
-            //return db.Categories;
-
+            return db.Categories;
+            /*
             var query = from c in db.Categories
                         select new { c.CategoryID, c.CategoryName, c.Description };
 
             return (IQueryable<Category>)query;
+             */ 
         }
 
         // GET: api/Categories/5
@@ -36,16 +37,18 @@ namespace AngularJS.Controllers
         {
             Category category = db.Categories.Find(id);
 
+            /*
             var query = from c in db.Categories
                         where c.CategoryID == id
                         select new { c.CategoryID, c.CategoryName, c.Description };
+            */
 
             if (category == null)
             {
                 return NotFound();
             }
 
-            return Ok((Category)query);
+            return Ok(category);
         }
 
         // PUT: api/Categories/5

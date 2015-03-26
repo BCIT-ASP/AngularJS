@@ -217,6 +217,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryMetaData.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Northwind.Context.cs">
       <AutoGen>True</AutoGen>
